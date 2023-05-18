@@ -5,6 +5,7 @@ const { Herd } = require("../models");
 
 async function index(req, res) {
   const herds = await Herd.findAll();
+  console.log(herds);
   res.json(herds);
 }
 
