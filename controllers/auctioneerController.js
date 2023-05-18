@@ -1,10 +1,9 @@
-const { Herd } = require("../models");
+const { Auctioneer } = require("../models");
 // Display a listing of the resource.
 async function index(req, res) {
   try {
-    const herds = await Herd.findAll();
-    console.log(herds);
-    res.status(200).json(herds);
+    const auctioneer = await Auctioneer.findAll();
+    res.status(200).json(auctioneer);
   } catch (error) {
     res.status(200).json(error);
   }
@@ -15,8 +14,8 @@ async function show(req, res) {
   console.log("params: ", req.params);
   const { id } = req.params;
   try {
-    const herds = await Herd.findByPk(id);
-    res.status(200).json(herds);
+    const auctioneer = await Auctioneer.findByPk(id);
+    res.status(200).json(auctioneer);
   } catch (error) {
     res.status(200).json(error);
   }

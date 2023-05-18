@@ -1,14 +1,13 @@
 const express = require("express");
-// const express = require("express");
-// const router = express.Router();
-// const usersController = require("../controllers/usersController");
+const router = express.Router();
+const usersController = require("../controllers/usersController");
 
-// Rutas relacionadas a operaciones CRUD de los usuarios...
+// Rutas relacionadas a operaciones CRUD de los lotes...
 
-// router.get("/", usersController.index);
-// router.post("/login", userController.login);
-// router.post("/", userController.store);
-// router.patch("/:id", userController.update);
-// router.delete("/:id", userController.destroy);
+router.get("/", usersController.index);
+router.get("/:id", usersController.show);
+router.post("/", usersController.store);
+router.patch("/:id", usersController.update);
+router.delete("/:id", usersController.destroy);
 
-// module.exports = router;
+module.exports = router;
