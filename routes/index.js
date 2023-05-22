@@ -4,8 +4,8 @@ const auctionRoutes = require("./auctionRoutes");
 const auctioneerRoutes = require("./auctioneerRoutes");
 
 module.exports = (app) => {
-  app.use("/catalogo", herdsRoutes);
+  app.use("/catalogue", herdsRoutes);
   app.use("/users", usersRoutes);
   app.use("/auction", auctionRoutes);
-  app.use("/auctioneer", auctioneerRoutes);
+  app.use("/auctioneers", auctioneerRoutes);
 };
