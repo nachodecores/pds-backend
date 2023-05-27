@@ -3,7 +3,6 @@ const { Herd } = require("../models");
 async function index(req, res) {
   try {
     const herds = await Herd.findAll();
-    console.log(herds);
     res.status(200).json(herds);
   } catch (error) {
     res.status(200).json(error);

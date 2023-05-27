@@ -18,6 +18,7 @@ module.exports = async () => {
       preBidPrice: faker.finance.amount(1, 4.5, 2),
       finalPrice: faker.finance.amount(1, 4.5, 2),
       weight: faker.datatype.number({ min: 0, max: 500, precision: 10 }),
+      category: "LoremIpsum",
       breed: breeds[randomBreedIndex],
       quantity: faker.datatype.number({ min: 1, max: 110 }),
       classType: faker.datatype.number({ min: 2, max: 4 }),
