@@ -34,8 +34,22 @@ async function edit(req, res) {}
 async function update(req, res) {}
 
 // Remove the specified resource from storage.
-async function destroy(req, res) {}
+async function destroy(req, res) {
+  const { id } = req.params;
 
+  try {
+    const herd = await Herd.destroy({
+      where: {
+        id: id,
+      },
+    });
+    res
+      .status(200)
+      .json({ message: `Elemento codigo: ${id} eliminado correctamente` });
+  } catch (error) {
+    res.status(200).json({ message: error });
+  }
+}
 // Otros handlers...
 // ...
 
