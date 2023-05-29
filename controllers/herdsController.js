@@ -17,7 +17,7 @@ async function show(req, res) {
     const herds = await Herd.findByPk(id);
     res.status(200).json(herds);
   } catch (error) {
-    res.status(200).json(error);
+    res.status(400).json(error);
   }
 }
 
@@ -43,9 +43,7 @@ async function destroy(req, res) {
         id: id,
       },
     });
-    res
-      .status(200)
-      .json({ message: `Elemento codigo: ${id} eliminado correctamente` });
+    res.status(200).json({ message: `Se elimino el Herd ${id} correctamente` });
   } catch (error) {
     res.status(200).json({ message: error });
   }
