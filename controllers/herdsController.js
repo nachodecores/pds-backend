@@ -3,7 +3,7 @@ const { Herd } = require("../models");
 async function index(req, res) {
   try {
     const herds = await Herd.findAll();
-    console.log(herds);
+    // console.log(herds);
     res.status(200).json(herds);
   } catch (error) {
     res.status(200).json(error);
@@ -12,13 +12,13 @@ async function index(req, res) {
 
 // Display the specified resource.
 async function show(req, res) {
-  console.log("params: ", req.params);
   const { id } = req.params;
+  console.log(id);
   try {
     const herds = await Herd.findByPk(id);
     res.status(200).json(herds);
   } catch (error) {
-    res.status(200).json(error);
+    res.status(500).json({ error: "Error retrieving herd" });
   }
 }
 
