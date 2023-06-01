@@ -12,6 +12,9 @@ class Herd extends Model {
         inspection: {
           type: DataTypes.INTEGER,
         },
+        cerifier: {
+          type: DataTypes.STRING,
+        },
         originalPrice: {
           type: DataTypes.DECIMAL,
         },
