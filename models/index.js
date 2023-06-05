@@ -11,15 +11,25 @@ const sequelize = new Sequelize(
   }
 );
 
+const Breed = require("./Breed");
+const Category_Herd = require("./Category_Herd");
 const Herd = require("./Herd");
 const User = require("./User");
 const Auctioneer = require("./Auctioneer");
 const Auction = require("./Auction");
 
+Breed.initModel(sequelize);
+Category_Herd.initModel(sequelize);
 Herd.initModel(sequelize);
 User.initModel(sequelize);
 Auctioneer.initModel(sequelize);
 Auction.initModel(sequelize);
+
+Herd.belongsTo(Breed);
+Breed.hasMany(Herd);
+
+Herd.belongsTo(Category_Herd);
+Category_Herd.hasMany(Herd);
 
 Herd.belongsTo(User);
 User.hasMany(Herd);
@@ -32,6 +42,8 @@ Herd.belongsTo(Auction);
 
 module.exports = {
   sequelize,
+  Breed,
+  Category_Herd,
   Herd,
   User,
   Auctioneer,
