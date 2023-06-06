@@ -26,7 +26,36 @@ async function show(req, res) {
 async function create(req, res) {}
 
 // Store a newly created resource in storage.
-async function store(req, res) {}
+async function store(req, res) {
+  /* try {
+    const form = formidable({
+      multiples: true,
+      uploadDir: __dirname + "/../public/img",
+      keepExtensions: true,
+    });
+
+    form.parse(req, async (err, fields, files) => {
+      const { name, description, price, stock, category } = fields;
+      
+
+      const product = await Product.create({
+        name: name,
+        description: description,
+        price: price,
+        stock: stock,
+        categoryId: category,
+        media: [files.media.newFilename],
+        
+      });
+
+      await product.save();
+
+      return res.status(200).json({ message: "Herd created successfully🚀 " });
+    });
+  } catch (err) {
+    res.status(500).json({ error: err });
+  } */
+}
 
 // Show the form for editing the specified resource.
 async function edit(req, res) {}
