@@ -24,15 +24,10 @@ class Herd extends Model {
         finalPrice: {
           type: DataTypes.DECIMAL,
         },
-        category: {
-          type: DataTypes.STRING,
-        },
         weight: {
           type: DataTypes.INTEGER,
         },
-        breed: {
-          type: DataTypes.STRING,
-        },
+
         quantity: {
           type: DataTypes.INTEGER,
         },

@@ -7,6 +7,8 @@ const { sequelize } = require("../models/index");
 
 async function runAllSeeders() {
   await sequelize.sync({ force: true });
+  await require("./breedSeeder")();
+  await require("./category_herdSeeder")();
   await require("./herdSeeder")();
   await require("./userSeeder")();
   await require("./auctioneerSeeder")();
