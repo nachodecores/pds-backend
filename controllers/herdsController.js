@@ -1,9 +1,10 @@
 const { Herd } = require("../models");
+
 // Display a listing of the resource.
 async function index(req, res) {
+  console.log("pirulo", herds);
   try {
     const herds = await Herd.findAll();
-    console.log(herds);
     res.status(200).json(herds);
   } catch (error) {
     res.status(200).json(error);
