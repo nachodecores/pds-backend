@@ -10,9 +10,9 @@ async function runAllSeeders() {
   await require("./userSeeder")();
   await require("./breedSeeder")();
   await require("./category_herdSeeder")();
-  await require("./herdSeeder")();
   await require("./auctioneerSeeder")();
   await require("./auctionSeeder")();
+  await require("./herdSeeder")();
 
   console.log("[Database] ¡Los datos de prueba fueron insertados!");
 }

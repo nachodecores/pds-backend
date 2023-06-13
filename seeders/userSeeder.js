@@ -5,6 +5,27 @@ faker.locale = "es";
 
 module.exports = async () => {
   const users = [];
+  const departments = [
+    "Artigas",
+    "Salto",
+    "Paysandú",
+    "Río Negro",
+    "Soriano",
+    "Colonia",
+    "San José",
+    "Flores",
+    "Florida",
+    "Durazno",
+    "Tacuarembó",
+    "Rivera",
+    "Cerro Largo",
+    "Durazno",
+    "Maldonado",
+    "Canelones",
+    "Rocha",
+    "Lavalleja",
+    "Montevideo",
+  ];
 
   for (let i = 0; i < 90; i++) {
     const firstname = faker.name.firstName();

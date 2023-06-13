@@ -16,13 +16,13 @@ class Herd extends Model {
           type: DataTypes.STRING,
         },
         originalPrice: {
-          type: DataTypes.DECIMAL,
+          type: DataTypes.DECIMAL(3, 2),
         },
         preBidPrice: {
-          type: DataTypes.DECIMAL,
+          type: DataTypes.DECIMAL(3, 2),
         },
         finalPrice: {
-          type: DataTypes.DECIMAL,
+          type: DataTypes.DECIMAL(3, 2),
         },
         weight: {
           type: DataTypes.INTEGER,

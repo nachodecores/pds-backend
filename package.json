@@ -16,6 +16,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-jwt": "^8.4.1",
+    "faker": "^6.6.6",
     "formidable": "^2.1.1",
     "jsonwebtoken": "^9.0.0",
     "mysql2": "^3.2.3",
