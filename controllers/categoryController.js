@@ -1,8 +1,8 @@
-const { Category_Herd } = require("../models");
+const { Category } = require("../models");
 // Display a listing of the resource.
 async function index(req, res) {
   try {
-    const category = await Category_Herd.findAll();
+    const category = await Category.findAll();
     res.status(200).json(category);
   } catch (error) {
     res.status(200).json(error);
@@ -13,7 +13,7 @@ async function index(req, res) {
 async function show(req, res) {
   const { id } = req.params;
   try {
-    const category = await Category_Herd.findByPk(id);
+    const category = await Category.findByPk(id);
     res.status(200).json(category);
   } catch (error) {
     res.status(200).json(error);

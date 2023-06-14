@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const category_herdController = require("../controllers/category_herdController");
+const categoryController = require("../controllers/categoryController");
 
 // Rutas relacionadas a operaciones CRUD de los lotes...
 
-router.get("/", category_herdController.index);
-router.get("/:id", category_herdController.show);
-router.post("/", category_herdController.store);
-router.patch("/:id", category_herdController.update);
-router.delete("/:id", category_herdController.destroy);
+router.get("/", categoryController.index);
+router.get("/:id", categoryController.show);
+router.post("/", categoryController.store);
+router.patch("/:id", categoryController.update);
+router.delete("/:id", categoryController.destroy);
 
 module.exports = router;

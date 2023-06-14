@@ -27,7 +27,7 @@ module.exports = async () => {
     "Montevideo",
   ];
 
-  for (let i = 0; i < 90; i++) {
+  for (let i = 0; i < 30; i++) {
     const firstname = faker.name.firstName();
     const lastname = faker.name.lastName();
     users.push({

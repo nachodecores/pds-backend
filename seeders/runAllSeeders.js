@@ -9,7 +9,7 @@ async function runAllSeeders() {
   await sequelize.sync({ force: true });
   await require("./userSeeder")();
   await require("./breedSeeder")();
-  await require("./category_herdSeeder")();
+  await require("./categorySeeder")();
   await require("./auctioneerSeeder")();
   await require("./auctionSeeder")();
   await require("./herdSeeder")();

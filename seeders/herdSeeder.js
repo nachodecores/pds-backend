@@ -2,7 +2,7 @@ const { faker } = require("@faker-js/faker");
 const {
   Herd,
   Breed,
-  Category_Herd,
+  Category,
   User,
   Auctioneer,
   Auction,
@@ -14,12 +14,12 @@ module.exports = async () => {
   const herds = [];
 
   const breeds = await Breed.findAll();
-  const categories = await Category_Herd.findAll();
+  const categories = await Category.findAll();
   const users = await User.findAll();
   const auctioneers = await Auctioneer.findAll();
   const auctions = await Auction.findAll();
 
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 20; i++) {
     const breedId = breeds[Math.floor(Math.random() * breeds.length)].id;
     const categoryId =
       categories[Math.floor(Math.random() * categories.length)].id;
@@ -40,7 +40,7 @@ module.exports = async () => {
       preBidPrice: faker.finance.amount(1, 4.5, 2),
       finalPrice: faker.finance.amount(1, 4.5, 2),
       weight: faker.datatype.number({ min: 0, max: 500, precision: 10 }),
-      quantity: faker.datatype.number({ min: 1, max: 110 }),
+      quantity: faker.datatype.number({ min: 1, max: 40 }),
       classType: faker.datatype.number({ min: 2, max: 4 }),
       state: faker.datatype.number({ min: 2, max: 4 }),
       sellStatus: "En Venta",

@@ -1,7 +1,7 @@
-const { Category_Herd } = require("../models");
+const { Category } = require("../models");
 
 module.exports = async () => {
-  const category_herd = [
+  const category = [
     {
       name: "Terneros",
     },
@@ -61,6 +61,6 @@ module.exports = async () => {
     },
   ];
 
-  await Category_Herd.bulkCreate(category_herd);
-  console.log("[Database] Se corrió el seeder de Category_Herd.");
+  await Category.bulkCreate(category);
+  console.log("[Database] Se corrió el seeder de Category.");
 };

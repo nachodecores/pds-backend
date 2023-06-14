@@ -11,7 +11,6 @@ async function index(req, res) {
 
 // Display the specified resource.
 async function show(req, res) {
-  console.log("params: ", req.params);
   const { id } = req.params;
   try {
     const auctioneer = await Auctioneer.findByPk(id);
