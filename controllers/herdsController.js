@@ -14,7 +14,7 @@ async function index(req, res) {
 // Display the specified resource.
 async function show(req, res) {
   const { id } = req.params;
-  console.log(id);
+  // console.log(id);
   try {
     const herds = await Herd.findByPk(id);
     res.status(200).json(herds);
@@ -56,7 +56,7 @@ async function store(req, res) {
         userId: vendedor,
         auctioneerId: escritorio,
         quantity: cantidad,
-        categoryHerdId: categoria,
+        categoryId: categoria,
         breedId: raza,
         weight: peso,
         originalPrice: precio,
